@@ -6,4 +6,8 @@
 (всередньому близько 70 років) з"їдає більше 10 тисяч плиток шоколаду,
 я вирішу це завдання таким способом:
 =end
-puts "I hope to eat #{7500} chocolate bars"
+puts "I hope to eat #{3900} chocolate bars"
+
+#or
+puts '--------------'
+puts "I hope to eat #{5 * 12 * 65} chocolate bars"
