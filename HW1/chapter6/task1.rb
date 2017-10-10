@@ -1,4 +1,4 @@
-amt = 29 #amount of bottle
+amt = 99 #amount of bottle
 bottle = ''
 # ---------------------------------------- решение используя if
 while amt != 0
