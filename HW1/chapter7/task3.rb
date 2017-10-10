@@ -1,4 +1,4 @@
-arr = ['Numbers','Letters','Variables','page 1','page 72','page 118']
+arr = ['Numbers', 'Letters', 'Variables', 'page 1', 'page 72', 'page 118']
 lineWidth = 45
 
 puts 'Content'.center(lineWidth)
