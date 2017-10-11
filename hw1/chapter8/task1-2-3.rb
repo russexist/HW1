@@ -1,10 +1,6 @@
-def englishNumber number
-  if number < 0
-    return 'Пожалуйста, введите неотрицательное число.'
-  end
-  if number == 0
-    return 'zero'
-  end
+def english_number number
+  return 'Пожалуйста, введите неотрицательное число.' if number < 0
+  return 'zero' if number == 0
 
   numString = ''
 
@@ -21,120 +17,100 @@ def englishNumber number
   left = left - write * 1_000_000_000_000_000_000_000_000_000_000_000
 
   if write > 0
-    decallion = englishNumber write
+    decallion = english_number(write)
     numString = numString + decallion + ' decallion'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000_000_000_000_000_000_000_000_000
   left = left - write * 1_000_000_000_000_000_000_000_000_000_000
 
   if write > 0
-    nonallion = englishNumber write
+    nonallion = english_number(write)
     numString = numString + nonallion + ' nonallion'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000_000_000_000_000_000_000_000
   left = left - write * 1_000_000_000_000_000_000_000_000_000
 
   if write > 0
-    octallion = englishNumber write
+    octallion = english_number(write)
     numString = numString + octallion + ' octallion'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000_000_000_000_000_000_000
   left = left - write * 1_000_000_000_000_000_000_000_000
 
   if write > 0
-    septillion = englishNumber write
+    septillion = english_number(write)
     numString = numString + septillion + ' septillion'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000_000_000_000_000_000
   left = left - write * 1_000_000_000_000_000_000_000
 
   if write > 0
-    sextillon = englishNumber write
+    sextillon = english_number(write)
     numString = numString + sextillon + ' sextillon'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000_000_000_000_000
   left = left - write * 1_000_000_000_000_000_000
 
   if write > 0
-    quintillion = englishNumber write
+    quintillion = english_number(write)
     numString = numString + quintillion + ' quintillion'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000_000_000_000
   left = left - write * 1_000_000_000_000_000
 
   if write > 0
-    quadrillion = englishNumber write
+    quadrillion = english_number(write)
     numString = numString + quadrillion + ' quadrillion'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000_000_000
   left = left - write *1_000_000_000_000
 
   if write > 0
-    trillion = englishNumber write
+    trillion = english_number(write)
     numString = numString + trillion + ' trillion'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000_000
   left = left - write * 1_000_000_000
 
   if write > 0
-    billion = englishNumber write
+    billion = english_number(write)
     numString = numString + billion + ' billion'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left / 1_000_000
   left = left - write * 1_000_000
 
   if write > 0
-    million = englishNumber write
+    million = english_number(write)
     numString = numString + million + ' million'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
 
@@ -142,12 +118,10 @@ def englishNumber number
   left = left - write * 1000
 
   if write > 0
-    thousand = englishNumber write
+    thousand = english_number(write)
     numString = numString + thousand + ' thousand'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left/100
@@ -155,39 +129,33 @@ def englishNumber number
 
   if write > 0
 
-    hundred  = englishNumber write
+    hundred  = english_number(write)
     numString = numString + hundred + ' hundred'
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left/10
   left  = left - write*10
 
   if write > 0
-    if ((write == 1) and (left > 0))
+    if (write == 1) && (left > 0)
       numString = numString + teenagers[left-1]
       left = 0
     else
       numString = numString + tensPlace[write-1]
     end
 
-    if left > 0
-      numString = numString + ' and '
-    end
+    numString = numString + ' and ' if left > 0
   end
 
   write = left
   left  = 0
 
-  if write > 0
-    numString = numString + onesPlace[write-1]
-  end
+  numString = numString + onesPlace[write-1] if write > 0
 
   numString
 end
 
 puts 'Введите ЛЮБОЕ неотрицательное число'
-puts englishNumber gets.chomp.to_i
+puts english_number gets.chomp.to_i

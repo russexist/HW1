@@ -1,6 +1,4 @@
 arr = []
-puts 'Ведите нужное количество слов'
-while arr.last != ''
-  arr.push gets.chomp
-end
+puts 'Ведите нужное количество слов или Enter на пустой строке для вывода'
+arr.push gets.chomp while arr.last != ''
 puts arr.sort
