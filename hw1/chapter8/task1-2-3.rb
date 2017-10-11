@@ -17,8 +17,8 @@ def englishNumber number
                'sixteen', 'seventeen', 'eighteen', 'nineteen']
 
   left = number
-  write = left / 1000000000000000000000000000000
-  left = left - write * 1000000000000000000000000000000
+  write = left / 1_000_000_000_000_000_000_000_000_000_000_000
+  left = left - write * 1_000_000_000_000_000_000_000_000_000_000_000
 
   if write > 0
     decallion = englishNumber write
@@ -29,8 +29,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000000000000000000000000
-  left = left - write * 1000000000000000000000000000
+  write = left / 1_000_000_000_000_000_000_000_000_000_000
+  left = left - write * 1_000_000_000_000_000_000_000_000_000_000
 
   if write > 0
     nonallion = englishNumber write
@@ -41,8 +41,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000000000000000000000
-  left = left - write * 1000000000000000000000000
+  write = left / 1_000_000_000_000_000_000_000_000_000
+  left = left - write * 1_000_000_000_000_000_000_000_000_000
 
   if write > 0
     octallion = englishNumber write
@@ -53,8 +53,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000000000000000000
-  left = left - write * 1000000000000000000000
+  write = left / 1_000_000_000_000_000_000_000_000
+  left = left - write * 1_000_000_000_000_000_000_000_000
 
   if write > 0
     septillion = englishNumber write
@@ -65,8 +65,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000000000000000
-  left = left - write * 1000000000000000000
+  write = left / 1_000_000_000_000_000_000_000
+  left = left - write * 1_000_000_000_000_000_000_000
 
   if write > 0
     sextillon = englishNumber write
@@ -77,8 +77,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000000000000
-  left = left - write * 1000000000000000
+  write = left / 1_000_000_000_000_000_000
+  left = left - write * 1_000_000_000_000_000_000
 
   if write > 0
     quintillion = englishNumber write
@@ -89,8 +89,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000000000
-  left = left - write * 1000000000000
+  write = left / 1_000_000_000_000_000
+  left = left - write * 1_000_000_000_000_000
 
   if write > 0
     quadrillion = englishNumber write
@@ -101,8 +101,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000000
-  left = left - write * 1000000000
+  write = left / 1_000_000_000_000
+  left = left - write *1_000_000_000_000
 
   if write > 0
     trillion = englishNumber write
@@ -113,8 +113,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000000
-  left = left - write * 1000000000
+  write = left / 1_000_000_000
+  left = left - write * 1_000_000_000
 
   if write > 0
     billion = englishNumber write
@@ -125,8 +125,8 @@ def englishNumber number
     end
   end
 
-  write = left / 1000000
-  left = left - write * 1000000
+  write = left / 1_000_000
+  left = left - write * 1_000_000
 
   if write > 0
     million = englishNumber write

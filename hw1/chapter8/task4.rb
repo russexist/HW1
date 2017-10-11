@@ -1,4 +1,4 @@
-def englishNumber number
+def englishNumber(number)
   if number < 0
     return 'Пожалуйста, введите неотрицательное число.'
   end
@@ -17,8 +17,8 @@ def englishNumber number
                'sixteen', 'seventeen', 'eighteen', 'nineteen']
 
   left = number
-    write = left / 1000000
-  left = left - write * 1000000
+    write = left / 1_000_000
+  left = left - write * 1_000_000
 
   if write > 0
     million = englishNumber write
@@ -83,7 +83,7 @@ end
 
 amount_bottle = 9999
 amount = amount_bottle
-def bottles_end amount
+def bottles_end(amount)
   if amount == 1
     "#{englishNumber amount} bottle"
   elsif amount > 1

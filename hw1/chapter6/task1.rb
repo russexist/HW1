@@ -1,6 +1,6 @@
 amt = 99 #amount of bottle
 bottle = ''
-# ---------------------------------------- решение используя if
+# ----------------------------- решение используя if
 while amt != 0
   if amt % 10 == 9 or amt % 10 == 8 or amt % 10 == 7 or amt % 10 == 7 or amt % 10 == 6 or amt % 10 == 5 or amt % 10 == 0
     bottle = 'бутылок'
@@ -36,15 +36,15 @@ while amt != 0
 end
 
 =begin
-# ----------------------------------------- решение используя case
+# ----------------------------- решение используя case
 while amt != 0
   case amt % 10
-    when 9, 8, 7, 6, 5, 0
-      bottle = 'бутылок'
-    when 4, 3, 2
-      bottle = 'бутылки'
-    else
-      bottle = 'бутылка'
+  when 9, 8, 7, 6, 5, 0
+    bottle = 'бутылок'
+  when 4, 3, 2
+    bottle = 'бутылки'
+  else
+    bottle = 'бутылка'
   end
   if amt < 15 and amt > 6
     bottle = 'бутылок'
@@ -54,12 +54,12 @@ while amt != 0
   puts "Возьми одну, пусти по кругу"
   amt -= 1
   case amt % 10
-    when 9, 8, 7, 6, 5, 0
-      bottle = 'бутылок'
-    when 4, 3, 2
-      bottle = 'бутылки'
-    else
-      bottle = 'бутылка'
+  when 9, 8, 7, 6, 5, 0
+    bottle = 'бутылок'
+  when 4, 3, 2
+    bottle = 'бутылки'
+  else
+    bottle = 'бутылка'
   end
   if amt < 15 and amt > 6
     bottle = 'бутылок'

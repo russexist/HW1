@@ -6,8 +6,6 @@ puts 'Enter your surname'
 surname = gets.chomp
 
 puts 'Hello, ' + surname + ' ' + name + ' ' + lname
-
 #or
 puts '--------------------'
-
 puts "Hello, #{surname} #{name} #{lname}"
